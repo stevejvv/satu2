@@ -1,0 +1,34 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        SATU
+      </a>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+	<div 
+		room-form 
+		room-types="roomTypes"
+		connected="connected"
+		room-add="roomAdd">
+	</div>
+	<div 
+		room-section 
+		room-list="rooms" 
+		room-types="roomTypes" 
+		client-types="clientTypes" 
+		self-id="selfId" 
+		connected="connected" 
+		room-del="roomDel" 
+		room-connect="roomConnect">
+	</div>	
+	<div ng-show="connected" class="well">
+		You are connected!
+		<button  ng-click="roomDis()" class="btn btn-danger pull-right btn-sm" ><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> Se déconnecter</button>
+	</div>
+	<toaster-container toaster-options="{'position-class': 'toast-bottom-right'}"></toaster-container>
+</div>

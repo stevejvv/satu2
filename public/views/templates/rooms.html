@@ -1,0 +1,42 @@
+
+	<div class="row" ng-hide="connected" >
+  		<div class="col-md-6" ng-repeat="room in roomList" >
+			<div class="panel panel-default" >
+				<div class="panel-heading" >			
+					<h1 class="panel-title">
+						{{room.name | uppercase}}
+						<small>({{roomTypes[(room.type)].name}})</small>
+					</h1>
+				</div>
+				<div class="panel-body">
+					<div class="col-xs-6 text-center">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<div class="text-center"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Console</div>
+							</div>
+							<div class="panel-body">
+								<button  ng-hide="room.backend == null" class="btn btn-primary btn-sm" ng-click="roomConnect()(room.name, 'backend')" ng-disabled="room.backend !== ''">Console</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 text-center">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<div class="text-center"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Clients</div>
+							</div>
+							<div class="panel-body">
+								<button  ng-hide="room.satu == null" class="btn btn-primary btn-sm" ng-click="roomConnect()(room.name, 'satu')" ng-disabled="room.satu !== ''">Saturomètre</button>
+								<button  ng-hide="room.gluco == null" class="btn btn-primary btn-sm" ng-click="roomConnect()(room.name, 'gluco')" ng-disabled="room.gluco !== ''">Glucomètre</button>
+								<button  ng-hide="room.astrid == null" class="btn btn-primary btn-sm" ng-click="roomConnect()(room.name, 'astrid')" ng-disabled="room.astrid !== ''">Astrid</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<button  class="btn btn-danger pull-right btn-sm" ng-click="roomDel()(room.name)" ><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> Delete Room</button>
+					<div class="clearfix"></div>
+				</div>
+			</div>	  
+		</div>
+	</div>
+

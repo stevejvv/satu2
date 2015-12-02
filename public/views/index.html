@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <base href="/">
+    <title>Saturomètre</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.16/toaster.min.css">
+    <script src="socket.io/socket.io.js"></script>
+    
+    
+    
+    <script src="angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.16/toaster.min.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+    <script src="angular-sanitize/angular-sanitize.js"></script>
+    <script src="jquery/dist/jquery.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div ng-view></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/app.routes.js"></script>
+    <script src="js/mainController.js"></script>
+    <script src="js/factories.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/directives.js"></script>
+</body>
+</html>
